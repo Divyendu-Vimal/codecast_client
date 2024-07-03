@@ -1,0 +1,116 @@
+/* Home.css */
+
+.home-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #171722;
+}
+
+.code-screens img {
+    max-width: 100%;
+    height: auto;
+    animation: moveUpDown 1.5s infinite alternate; /* Animation added for moving up and down */
+  }
+  
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(20px);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+  
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #22222c;
+}
+
+.input-fields span {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.input-fields input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px white;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+  background-color: #3d404a;
+}
+
+.input-fields button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.input-fields button:first-of-type {
+  background-color: #39e079;
+  color: #000000;
+  border: 1px solid #39e079;
+}
+
+.input-fields button:first-of-type:hover {
+  background-color: #50b172;
+  border: 1px solid #39e079;
+}
+
+.input-fields button:last-of-type {
+  background-color: transparent;
+  color: white;
+  text-decoration: underline;
+  border: none;
+  cursor: pointer;
+}
+
+.input-fields button:last-of-type:hover {
+  color: white;
+}
+
+@media (max-width: 500px) {
+  .home-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .code-screens {
+    margin-bottom: 20px;
+  }
+
+  .input-fields {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .input-fields span {
+    font-size: 1.5em;
+  }
+
+  .input-fields input,
+  .input-fields button {
+    font-size: 0.9em;
+  }
+}
